@@ -1,0 +1,42 @@
+{
+    "extends": [
+        "config:base"
+    ],
+    "enabledManagers": [
+        "flux"
+    ],
+    "flux": {
+        "fileMatch": ["clusters/.*\\.yaml$"]
+    },
+    "separateMajorMinor": false,
+    "packageRules": [
+        {
+            "groupName": "invalid for flux but working for renovate"
+            "matchManagers": ["flux"],
+            "matchDatasources": ["docker"],
+            "versioning": "loose",
+            "matchPaths": ["clusters/_invalid-for-flux-but-working-for-renovate/*"]
+        },
+        {
+            "groupName": "semver versioning"
+            "matchManagers": ["flux"],
+            "matchDatasources": ["docker"],
+            "versioning": "semver",
+            "matchPaths": ["clusters/semver-versioning/*"]
+        },
+        {
+            "groupName": "loose versioning"
+            "matchManagers": ["flux"],
+            "matchDatasources": ["docker"],
+            "versioning": "loose",
+            "matchPaths": ["clusters/loose-versioning/*"]
+        },
+        {
+            "groupName": "docker versioning"
+            "matchManagers": ["flux"],
+            "matchDatasources": ["docker"],
+            "versioning": "docker",
+            "matchPaths": ["clusters/docker-versioning/*"]
+        }
+    ]
+}
