@@ -44,6 +44,11 @@
             "matchDatasources": ["docker"],
             "versioning": "docker",
             "matchFileNames": ["clusters/docker-versioning/*"]
+        },
+        {
+            "groupName": "auto-detected",
+            "additionalBranchPrefix": "auto-detected-",
+            "matchFileNames": ["clusters/auto-detected/*"]
         }
     ]
 }
