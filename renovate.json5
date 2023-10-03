@@ -13,35 +13,35 @@
         {
             "groupName": "invalid for flux but working for renovate",
             "matchManagers": ["flux"],
-            "matchDatasources": ["docker"],
+            "matchDatasources": ["docker", "oci-helm"],
             "versioning": "loose",
             "matchFileNames": ["clusters/_invalid-for-flux-but-working-for-renovate/*"]
         },
         {
             "groupName": "semver versioning",
             "matchManagers": ["flux"],
-            "matchDatasources": ["docker"],
+            "matchDatasources": ["docker", "oci-helm"],
             "versioning": "semver",
             "matchFileNames": ["clusters/semver-versioning/*"]
         },
         {
             "groupName": "helm versioning",
             "matchManagers": ["flux"],
-            "matchDatasources": ["docker"],
+            "matchDatasources": ["docker", "oci-helm"],
             "versioning": "helm",
             "matchFileNames": ["clusters/helm-versioning/*"]
         },
         {
             "groupName": "loose versioning",
             "matchManagers": ["flux"],
-            "matchDatasources": ["docker"],
+            "matchDatasources": ["docker", "oci-helm"],
             "versioning": "loose",
             "matchFileNames": ["clusters/loose-versioning/*"]
         },
         {
             "groupName": "docker versioning",
             "matchManagers": ["flux"],
-            "matchDatasources": ["docker"],
+            "matchDatasources": ["docker", "oci-helm"],
             "versioning": "docker",
             "matchFileNames": ["clusters/docker-versioning/*"]
         },
