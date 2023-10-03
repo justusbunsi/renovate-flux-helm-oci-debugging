@@ -1,6 +1,6 @@
 {
     "extends": [
-        "config:base"
+        "config:recommended"
     ],
     "enabledManagers": [
         "flux"
@@ -15,35 +15,35 @@
             "matchManagers": ["flux"],
             "matchDatasources": ["docker"],
             "versioning": "loose",
-            "matchPaths": ["clusters/_invalid-for-flux-but-working-for-renovate/*"]
+            "matchFileNames": ["clusters/_invalid-for-flux-but-working-for-renovate/*"]
         },
         {
             "groupName": "semver versioning",
             "matchManagers": ["flux"],
             "matchDatasources": ["docker"],
             "versioning": "semver",
-            "matchPaths": ["clusters/semver-versioning/*"]
+            "matchFileNames": ["clusters/semver-versioning/*"]
         },
         {
             "groupName": "helm versioning",
             "matchManagers": ["flux"],
             "matchDatasources": ["docker"],
             "versioning": "helm",
-            "matchPaths": ["clusters/helm-versioning/*"]
+            "matchFileNames": ["clusters/helm-versioning/*"]
         },
         {
             "groupName": "loose versioning",
             "matchManagers": ["flux"],
             "matchDatasources": ["docker"],
             "versioning": "loose",
-            "matchPaths": ["clusters/loose-versioning/*"]
+            "matchFileNames": ["clusters/loose-versioning/*"]
         },
         {
             "groupName": "docker versioning",
             "matchManagers": ["flux"],
             "matchDatasources": ["docker"],
             "versioning": "docker",
-            "matchPaths": ["clusters/docker-versioning/*"]
+            "matchFileNames": ["clusters/docker-versioning/*"]
         }
     ]
 }
