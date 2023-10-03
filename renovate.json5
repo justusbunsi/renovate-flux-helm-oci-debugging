@@ -25,6 +25,13 @@
             "matchPaths": ["clusters/semver-versioning/*"]
         },
         {
+            "groupName": "helm versioning",
+            "matchManagers": ["flux"],
+            "matchDatasources": ["docker"],
+            "versioning": "helm",
+            "matchPaths": ["clusters/helm-versioning/*"]
+        },
+        {
             "groupName": "loose versioning",
             "matchManagers": ["flux"],
             "matchDatasources": ["docker"],
