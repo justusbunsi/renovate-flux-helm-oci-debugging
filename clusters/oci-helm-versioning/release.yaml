@@ -1,0 +1,23 @@
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: semver-versioning
+  namespace: flux-system
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: renovate-flux-helm-oci
+      version: "0.1.1-1686130589+build1-7aebcdf"
+      sourceRef:
+        kind: HelmRepository
+        name: oci-repository
+        namespace: flux-system
+      interval: 5m
+  install:
+    crds: Create
+    createNamespace: true
+  upgrade:
+    crds: CreateReplace
+  releaseName: semver-versioning
+  targetNamespace: semver-versioning

@@ -49,6 +49,11 @@
             "groupName": "auto-detected",
             "additionalBranchPrefix": "auto-detected-",
             "matchFileNames": ["clusters/auto-detected/*"]
+        },
+        {
+            "groupName": "oci-helm versioning",
+            "versioning": "oci-helm",
+            "matchFileNames": ["clusters/oci-helm-versioning/*"]
         }
     ]
 }
