@@ -1,7 +1,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: semver-versioning
+  name: oci-helm-versioning
   namespace: flux-system
 spec:
   interval: 5m
@@ -19,5 +19,53 @@ spec:
     createNamespace: true
   upgrade:
     crds: CreateReplace
-  releaseName: semver-versioning
-  targetNamespace: semver-versioning
+  releaseName: oci-helm-versioning
+  targetNamespace: oci-helm-versioning
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: range-oci-helm-versioning-1
+  namespace: flux-system
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: renovate-flux-helm-oci
+      version: "0.0.0 - 0.1.1-0, <=0.1.1-1686130600"
+      sourceRef:
+        kind: HelmRepository
+        name: oci-repository
+        namespace: flux-system
+      interval: 5m
+  install:
+    crds: Create
+    createNamespace: true
+  upgrade:
+    crds: CreateReplace
+  releaseName: range-oci-helm-versioning
+  targetNamespace: range-oci-helm-versioning
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: range-oci-helm-versioning-2
+  namespace: flux-system
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: renovate-flux-helm-oci
+      version: ">=0.1.1-1686"
+      sourceRef:
+        kind: HelmRepository
+        name: oci-repository
+        namespace: flux-system
+      interval: 5m
+  install:
+    crds: Create
+    createNamespace: true
+  upgrade:
+    crds: CreateReplace
+  releaseName: range-oci-helm-versioning
+  targetNamespace: range-oci-helm-versioning
