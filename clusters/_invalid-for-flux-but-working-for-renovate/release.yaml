@@ -8,7 +8,7 @@ spec:
   chart:
     spec:
       chart: renovate-flux-helm-oci
-      version: "0.1.1-1686130589_build1-7aebcdf"
+      version: "0.1.1-1686130637_build2-ld3fn0s"
       sourceRef:
         kind: HelmRepository
         name: oci-repository
