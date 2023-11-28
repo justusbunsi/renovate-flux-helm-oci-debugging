@@ -4,6 +4,6 @@
   "description": "Showcase repository for Renovate discussion about Flux OCI HelmRelease",
   "license": "MIT",
   "dependencies": {
-    "api": "^4.1.0"
+    "api": "^6.0.0"
   }
 }
